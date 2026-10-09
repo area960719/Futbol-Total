@@ -1,26 +1,41 @@
 # Fútbol Total ⚽
 
-Fútbol Total es una web deportiva con estilo moderno, pensada para mostrar partidos, clasificación, goleadores y búsquedas rápidas por equipos o jugadores.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Status](https://img.shields.io/badge/Status-En%20desarrollo-yellow?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-## Características
+Fútbol Total es una plataforma web moderna para ver en tiempo real partidos, clasificaciones, estadísticas de goleadores y buscar información de equipos y jugadores favoritos. Diseñada con un estilo profesional similar a portales deportivos reconocidos.
 
-- Diseño tipo portal deportivo
-- Sección principal con banner llamativo
-- Filtro de búsqueda por jugador, equipo o goleador
-- Visualización de partidos recientes
-- Tabla de clasificación
-- Top goleadores
-- Diseño responsive para móvil y escritorio
+## 📋 Tabla de contenidos
 
-## Estructura del proyecto
+- [Características](#-características)
+- [Tecnologías](#-tecnologías)
+- [Estructura](#-estructura-del-proyecto)
+- [Instalación](#-instalación)
+- [Despliegue](#-despliegue-en-netlify)
+- [Cómo usar](#-cómo-usar)
+- [Contribuir](#-cómo-contribuir)
+- [Licencia](#-licencia)
 
-```bash
-Futbol-Total/
-├── index.html
-├── README.md
-├── .gitignore
-├── css/
-│   └── style.css
-└── js/
-    ├── api.js
-    └── script.js
+## ✨ Características
+
+- 🎨 **Diseño moderno y responsivo** — Interfaz limpia y profesional
+- 🔍 **Búsqueda avanzada** — Filtra por jugador, equipo o goleador
+- ⚽ **Partidos en vivo** — Visualiza resultados y marcadores
+- 📊 **Tabla de clasificación** — Ver posiciones y estadísticas
+- 🏆 **Top goleadores** — Ranking de máximos anotadores
+- 📱 **Versión móvil** — Funciona perfectamente en cualquier dispositivo
+- ⚡ **Rápido y ligero** — Sin dependencias externas
+
+## 🛠 Tecnologías
+
+| Tecnología | Descripción |
+|-----------|------------|
+| **HTML5** | Estructura semántica de la página |
+| **CSS3** | Estilos visuales, gradientes y animaciones |
+| **JavaScript** | Lógica interactiva y manejo de datos |
+| **Netlify** | Hosting y despliegue automático |
+
+## 📁 Estructura del proyecto
