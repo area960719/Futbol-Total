@@ -35,6 +35,7 @@
 
     async function ejecutarBusqueda(texto, tipo) {
         const caja = $("searchResults");
+        if (!caja) return;
         texto = (texto || "").trim();
         if (!texto) {
             caja.innerHTML = '<p class="msg-x">Escribe un nombre para buscar.</p>';
@@ -45,7 +46,7 @@
             let html = "";
             if (tipo === "equipo") {
                 html = (await buscarEquipo(texto)).map(tarjetaEquipo).join("");
-            } else if (tipo === "jugador" || tipo === "goleador") {
+            } else if (tipo === "jugador") {
                 html = (await buscarJugador(texto)).map(tarjetaJugador).join("");
             } else {
                 const [js, es] = await Promise.all([buscarJugador(texto), buscarEquipo(texto)]);
@@ -59,6 +60,7 @@
 
     async function cargarPartidos() {
         const caja = $("matchesList");
+        if (!caja) return;
         caja.innerHTML = "<p>Cargando partidos...</p>";
         try {
             const ev = await ultimosPartidos();
@@ -75,6 +77,7 @@
 
     async function cargarTabla() {
         const caja = $("standingsTable");
+        if (!caja) return;
         caja.innerHTML = "<p>Cargando clasificación...</p>";
         try {
             const t = await clasificacion();
@@ -92,6 +95,7 @@
 
     async function cargarDestacados() {
         const caja = $("scorersList");
+        if (!caja) return;
         caja.innerHTML = "<p>Cargando jugadores...</p>";
         const nombres = ["Lamine Yamal", "Kylian Mbappe", "Erling Haaland", "Vinicius Junior"];
         try {
@@ -104,14 +108,15 @@
     }
 
     document.addEventListener("DOMContentLoaded", () => {
-        $("searchBtn").addEventListener("click", () => ejecutarBusqueda($("searchInput").value, ""));
-        $("searchInput").addEventListener("keydown", (e) => {
-            if (e.key === "Enter") ejecutarBusqueda($("searchInput").value, "");
-        });
-        $("filterBtn").addEventListener("click", () => ejecutarBusqueda($("filterInput").value, $("typeFilter").value));
-        $("filterInput").addEventListener("keydown", (e) => {
-            if (e.key === "Enter") ejecutarBusqueda($("filterInput").value, $("typeFilter").value);
-        });
+        const btn = $("filterBtn");
+        const inp = $("filterInput");
+        const tipo = $("typeFilter");
+        if (btn && inp && tipo) {
+            btn.addEventListener("click", () => ejecutarBusqueda(inp.value, tipo.value));
+            inp.addEventListener("keydown", (e) => {
+                if (e.key === "Enter") ejecutarBusqueda(inp.value, tipo.value);
+            });
+        }
 
         cargarPartidos();
         cargarTabla();
