@@ -53,3 +53,59 @@ const mockData = {
         { rank: 5, name: 'Harry Kane', team: 'Bayern Munich', goals: 5 },
     ]
 };
+
+// Función para obtener partidos
+async function getMatches() {
+    try {
+        // En producción, aquí iría la llamada a la API real
+        // const response = await fetch(`${API_CONFIG.footballData}/matches`);
+        // return await response.json();
+        
+        return mockData.matches;
+    } catch (error) {
+        console.error('Error obteniendo partidos:', error);
+        return [];
+    }
+}
+
+// Función para obtener clasificación
+async function getStandings() {
+    try {
+        return mockData.standings;
+    } catch (error) {
+        console.error('Error obteniendo clasificación:', error);
+        return [];
+    }
+}
+
+// Función para obtener goleadores
+async function getTopScorers() {
+    try {
+        return mockData.scorers;
+    } catch (error) {
+        console.error('Error obteniendo goleadores:', error);
+        return [];
+    }
+}
+
+// Función de búsqueda
+function searchData(query, type) {
+    query = query.toLowerCase();
+    let results = [];
+
+    if (type === 'jugador' || type === '') {
+        results = mockData.scorers.filter(scorer =>
+            scorer.name.toLowerCase().includes(query)
+        );
+    } else if (type === 'equipo' || type === '') {
+        results = mockData.standings.filter(team =>
+            team.team.toLowerCase().includes(query)
+        );
+    } else if (type === 'goleador') {
+        results = mockData.scorers.filter(scorer =>
+            scorer.name.toLowerCase().includes(query)
+        );
+    }
+
+    return results;
+}
