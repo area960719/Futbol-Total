@@ -1,1 +1,11 @@
-.gitignore
+node_modules/
+.vscode/
+.idea/
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+.env
+.env.local
+dist/
+build/
