@@ -17,15 +17,11 @@
 
             <nav class="main-nav">
                 <a href="#inicio">Inicio</a>
+                <a href="#buscador">Buscar</a>
                 <a href="#partidos">Partidos</a>
                 <a href="#tabla">Clasificación</a>
-                <a href="#goleadores">Goleadores</a>
+                <a href="#goleadores">Destacados</a>
             </nav>
-
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Buscar equipo o jugador">
-                <button id="searchBtn">Buscar</button>
-            </div>
         </div>
     </header>
 
@@ -35,54 +31,24 @@
                 <div class="hero-text">
                     <span class="tag">LIVE • FÚTBOL INTERNACIONAL</span>
                     <h1>Todo el fútbol en una sola web</h1>
-                    <p>Resultados, clasificación, goleadores y estadísticas de tus equipos favoritos.</p>
+                    <p>Resultados, clasificación y datos de tus equipos y jugadores favoritos.</p>
                     <div class="hero-actions">
-                        <a href="#partidos" class="btn btn-primary">Ver partidos</a>
+                        <a href="#buscador" class="btn btn-primary">Buscar</a>
                         <a href="#tabla" class="btn btn-secondary">Ver clasificación</a>
-                    </div>
-                </div>
-
-                <div class="hero-panel">
-                    <div class="mini-match">
-                        <div class="mini-head">
-                            <span>LaLiga</span>
-                            <span>Hoy</span>
-                        </div>
-                        <div class="mini-score">
-                            <div class="team">
-                                <span class="team-name">Real Madrid</span>
-                            </div>
-                            <strong>2 - 1</strong>
-                            <div class="team">
-                                <span class="team-name">Barcelona</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mini-stats">
-                        <div>
-                            <small>Goleadores</small>
-                            <strong>Vinícius 8</strong>
-                        </div>
-                        <div>
-                            <small>Promedio</small>
-                            <strong>2.4</strong>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="search-box-section">
+        <section id="buscador" class="search-box-section">
             <div class="container">
                 <div class="filter-box">
                     <select id="typeFilter">
-                        <option value="">Tipo de búsqueda</option>
+                        <option value="">Todo</option>
                         <option value="jugador">Jugador</option>
                         <option value="equipo">Equipo</option>
-                        <option value="goleador">Goleador</option>
                     </select>
-                    <input type="text" id="filterInput" placeholder="Escribe aquí..." />
+                    <input type="text" id="filterInput" placeholder="Escribe aquí... (ej: Lamine Yamal)" />
                     <button id="filterBtn">Buscar datos</button>
                 </div>
                 <div id="searchResults" class="results-grid"></div>
@@ -93,9 +59,7 @@
             <div class="container">
                 <div class="section-header">
                     <h2>Últimos partidos</h2>
-                    <a href="#partidos">Ver todos</a>
                 </div>
-
                 <div id="matchesList" class="matches-grid"></div>
             </div>
         </section>
@@ -104,9 +68,7 @@
             <div class="container">
                 <div class="section-header">
                     <h2>Clasificación</h2>
-                    <a href="#tabla">Ver tabla completa</a>
                 </div>
-
                 <div id="standingsTable" class="table-wrap"></div>
             </div>
         </section>
@@ -114,10 +76,8 @@
         <section id="goleadores" class="section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Top goleadores</h2>
-                    <a href="#goleadores">Ver más</a>
+                    <h2>Jugadores destacados</h2>
                 </div>
-
                 <div id="scorersList" class="scorers-grid"></div>
             </div>
         </section>
@@ -131,9 +91,9 @@
             </div>
 
             <div class="footer-links">
-                <a href="#partidos">Noticias</a>
-                <a href="#tabla">Estadísticas</a>
-                <a href="#inicio">Contactos</a>
+                <a href="#partidos">Partidos</a>
+                <a href="#tabla">Clasificación</a>
+                <a href="#inicio">Inicio</a>
             </div>
         </div>
     </footer>
