@@ -6,36 +6,35 @@
 ![Status](https://img.shields.io/badge/Status-En%20desarrollo-yellow?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-Fútbol Total es una plataforma web moderna para ver en tiempo real partidos, clasificaciones, estadísticas de goleadores y buscar información de equipos y jugadores favoritos. Diseñada con un estilo profesional similar a portales deportivos reconocidos.
-
-## 📋 Tabla de contenidos
-
-- [Características](#-características)
-- [Tecnologías](#-tecnologías)
-- [Estructura](#-estructura-del-proyecto)
-- [Instalación](#-instalación)
-- [Despliegue](#-despliegue-en-netlify)
-- [Cómo usar](#-cómo-usar)
-- [Contribuir](#-cómo-contribuir)
-- [Licencia](#-licencia)
+Fútbol Total es una plataforma web moderna para ver partidos, clasificaciones, estadísticas de goleadores y buscar información de equipos y jugadores favoritos. Diseñada con un estilo profesional parecido a portales deportivos reconocidos.
 
 ## ✨ Características
 
-- 🎨 **Diseño moderno y responsivo** — Interfaz limpia y profesional
-- 🔍 **Búsqueda avanzada** — Filtra por jugador, equipo o goleador
-- ⚽ **Partidos en vivo** — Visualiza resultados y marcadores
-- 📊 **Tabla de clasificación** — Ver posiciones y estadísticas
-- 🏆 **Top goleadores** — Ranking de máximos anotadores
-- 📱 **Versión móvil** — Funciona perfectamente en cualquier dispositivo
-- ⚡ **Rápido y ligero** — Sin dependencias externas
+- Diseño moderno y responsivo
+- Búsqueda por jugador, equipo o goleador
+- Sección de partidos recientes
+- Tabla de clasificación
+- Top goleadores
+- Vista adaptada para móvil y escritorio
+- Interfaz limpia y fácil de usar
 
 ## 🛠 Tecnologías
 
-| Tecnología | Descripción |
-|-----------|------------|
-| **HTML5** | Estructura semántica de la página |
-| **CSS3** | Estilos visuales, gradientes y animaciones |
-| **JavaScript** | Lógica interactiva y manejo de datos |
-| **Netlify** | Hosting y despliegue automático |
+- HTML5
+- CSS3
+- JavaScript
+- Netlify
 
-## 📁 Estructura del proyecto 
+## 📁 Estructura del proyecto
+
+```bash
+Futbol-Total/
+│
+├── index.html
+├── README.md
+├── .gitignore
+├── css/
+│   └── style.css
+└── js/
+    ├── api.js
+    └── script.js
