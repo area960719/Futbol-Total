@@ -38,4 +38,4 @@ Fútbol Total es una plataforma web moderna para ver en tiempo real partidos, cl
 | **JavaScript** | Lógica interactiva y manejo de datos |
 | **Netlify** | Hosting y despliegue automático |
 
-## 📁 Estructura del proyecto
+## 📁 Estructura del proyecto 
