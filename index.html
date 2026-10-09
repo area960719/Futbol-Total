@@ -1,1 +1,104 @@
-index.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fútbol Total - Noticias y Estadísticas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>⚽ FÚTBOL TOTAL</h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pages/estadisticas.html">Estadísticas</a></li>
+                    <li><a href="pages/equipos.html">Equipos</a></li>
+                    <li><a href="pages/jugadores.html">Jugadores</a></li>
+                    <li><a href="pages/partidos.html">Partidos</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Buscar jugador, equipo, estadística...">
+                <button id="searchBtn">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- BANNER PRINCIPAL -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Bienvenido a Fútbol Total</h2>
+            <p>Las mejores estadísticas y noticias del fútbol mundial</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE BÚSQUEDA DESTACADA -->
+    <section class="search-section">
+        <div class="container">
+            <h2>Busca tu información de interés</h2>
+            <div class="filter-options">
+                <select id="typeFilter">
+                    <option value="">Selecciona tipo de búsqueda</option>
+                    <option value="jugador">Jugador</option>
+                    <option value="equipo">Equipo</option>
+                    <option value="liga">Liga</option>
+                    <option value="goleador">Máximo Goleador</option>
+                </select>
+                <input type="text" id="filterInput" placeholder="Escribe aquí...">
+                <button id="filterBtn">Buscar</button>
+            </div>
+            <div id="searchResults" class="results"></div>
+        </div>
+    </section>
+
+    <!-- ÚLTIMOS PARTIDOS -->
+    <section class="latest-matches">
+        <div class="container">
+            <h2>Últimos Partidos</h2>
+            <div id="matchesList" class="matches-grid">
+                <!-- Se cargará dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- TABLA DE POSICIONES -->
+    <section class="standings">
+        <div class="container">
+            <h2>Clasificación La Liga</h2>
+            <div id="standingsTable" class="table-responsive">
+                <!-- Se cargará dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- TOP GOLEADORES -->
+    <section class="top-scorers">
+        <div class="container">
+            <h2>Top 10 Goleadores 2024</h2>
+            <div id="scorersList" class="scorers-grid">
+                <!-- Se cargará dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Fútbol Total. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#">Twitter</a>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
