@@ -3,97 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fútbol Total - Noticias y Estadísticas</title>
+    <title>Fútbol Total</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="header">
-        <div class="container">
+
+    <header class="topbar">
+        <div class="container nav-wrap">
             <div class="logo">
-                <h1>⚽ FÚTBOL TOTAL</h1>
+                <span class="logo-mark">⚽</span>
+                <span>FÚTBOL TOTAL</span>
             </div>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="pages/estadisticas.html">Estadísticas</a></li>
-                    <li><a href="pages/equipos.html">Equipos</a></li>
-                    <li><a href="pages/jugadores.html">Jugadores</a></li>
-                    <li><a href="pages/partidos.html">Partidos</a></li>
-                </ul>
+
+            <nav class="main-nav">
+                <a href="#">Inicio</a>
+                <a href="#">Noticias</a>
+                <a href="#">Estadísticas</a>
+                <a href="#">Equipos</a>
+                <a href="#">Jugadores</a>
+                <a href="#">Partidos</a>
             </nav>
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Buscar jugador, equipo, estadística...">
-                <button id="searchBtn">🔍</button>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar equipo o jugador">
+                <button id="searchBtn">Buscar</button>
             </div>
         </div>
     </header>
 
-    <!-- BANNER PRINCIPAL -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Bienvenido a Fútbol Total</h2>
-            <p>Las mejores estadísticas y noticias del fútbol mundial</p>
-        </div>
-    </section>
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="tag">LIVE • FÚTBOL INTERNACIONAL</span>
+                    <h1>Todo el fútbol en una sola web</h1>
+                    <p>Resultados, clasificación, goleadores y estadísticas de tus equipos favoritos.</p>
+                    <div class="hero-actions">
+                        <a href="#partidos" class="btn btn-primary">Ver partidos</a>
+                        <a href="#tabla" class="btn btn-secondary">Ver clasificación</a>
+                    </div>
+                </div>
 
-    <!-- SECCIÓN DE BÚSQUEDA DESTACADA -->
-    <section class="search-section">
-        <div class="container">
-            <h2>Busca tu información de interés</h2>
-            <div class="filter-options">
-                <select id="typeFilter">
-                    <option value="">Selecciona tipo de búsqueda</option>
-                    <option value="jugador">Jugador</option>
-                    <option value="equipo">Equipo</option>
-                    <option value="liga">Liga</option>
-                    <option value="goleador">Máximo Goleador</option>
-                </select>
-                <input type="text" id="filterInput" placeholder="Escribe aquí...">
-                <button id="filterBtn">Buscar</button>
+                <div class="hero-panel">
+                    <div class="mini-match">
+                        <div class="mini-head">
+                            <span>LaLiga</span>
+                            <span>Hoy</span>
+                        </div>
+                        <div class="mini-score">
+                            <div class="team">
+                                <span class="team-name">Real Madrid</span>
+                            </div>
+                            <strong>2 - 1</strong>
+                            <div class="team">
+                                <span class="team-name">Barcelona</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mini-stats">
+                        <div>
+                            <small>Goleadores</small>
+                            <strong>Vinícius 8</strong>
+                        </div>
+                        <div>
+                            <small>Promedio</small>
+                            <strong>2.4</strong>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="searchResults" class="results"></div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ÚLTIMOS PARTIDOS -->
-    <section class="latest-matches">
-        <div class="container">
-            <h2>Últimos Partidos</h2>
-            <div id="matchesList" class="matches-grid">
-                <!-- Se cargará dinámicamente -->
+        <section class="search-box-section">
+            <div class="container">
+                <div class="filter-box">
+                    <select id="typeFilter">
+                        <option value="">Tipo de búsqueda</option>
+                        <option value="jugador">Jugador</option>
+                        <option value="equipo">Equipo</option>
+                        <option value="goleador">Goleador</option>
+                    </select>
+                    <input type="text" id="filterInput" placeholder="Escribe aquí..." />
+                    <button id="filterBtn">Buscar datos</button>
+                </div>
+                <div id="searchResults" class="results-grid"></div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- TABLA DE POSICIONES -->
-    <section class="standings">
-        <div class="container">
-            <h2>Clasificación La Liga</h2>
-            <div id="standingsTable" class="table-responsive">
-                <!-- Se cargará dinámicamente -->
+        <section id="partidos" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Últimos partidos</h2>
+                    <a href="#">Ver todos</a>
+                </div>
+
+                <div id="matchesList" class="matches-grid"></div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- TOP GOLEADORES -->
-    <section class="top-scorers">
-        <div class="container">
-            <h2>Top 10 Goleadores 2024</h2>
-            <div id="scorersList" class="scorers-grid">
-                <!-- Se cargará dinámicamente -->
+        <section id="tabla" class="section dark-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Clasificación</h2>
+                    <a href="#">Ver tabla completa</a>
+                </div>
+
+                <div id="standingsTable" class="table-wrap"></div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FOOTER -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Top goleadores</h2>
+                    <a href="#">Ver más</a>
+                </div>
+
+                <div id="scorersList" class="scorers-grid"></div>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Fútbol Total. Todos los derechos reservados.</p>
-            <div class="social-links">
-                <a href="#">Twitter</a>
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
+        <div class="container footer-wrap">
+            <div>
+                <h3>Fútbol Total</h3>
+                <p>Tu portal deportivo favorito.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Noticias</a>
+                <a href="#">Estadísticas</a>
+                <a href="#">Contactos</a>
             </div>
         </div>
     </footer>
